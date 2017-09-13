@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+        <div>
+            <form action="/selectElectives" method="post">
+                <div class="form-group">
+                    <label class="lead" for="registerNo">Register Number:</label>
+                    <input id="registerNo" class="form-control" type="text" name="registerNumber" [(ngModel)]="reg" readonly>
+                </div>
+                <div class="form-group">
+                    <label class="lead" for="department">Department:</label>
+                    <input id="department" class="form-control" type="text" name="department" [(ngModel)]="email" disabled>
+                </div>
+                <label class="lead" for="selection">Select your elective:</label>
+                <select style="width: 50%;height: 35px; margin-bottom: 5%; display: block;" id='selection' name="courseCode" required>
+                    <option value="select">--Select--</option>
+            </select>
+                <div class="form-group">
+                    <button onclick="validate()" class="btn btn-info">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-7">
+        <table class="table table-hover table-sm table-responsive table-striped table-bordered">
+            <thead>
+                <tr class="bg-info">
+                    <td>#</td>
+                    <td>Course Name:</td>
+                    <td>Course Code</td>
+                    <td>Seats Left</td>
+                </tr>
+            </thead>
+            <tbody>
+                <!--<% var slno = 1; %>
+                    <% electives.forEach(function(elective){ %>
+                        <tr>
+                            <% if(currentUser.department != elective.department){ %>
+                                <td>
+                                    <%= slno++ %>
+                                </td>
+                                <td>
+                                    <%= elective.courseName %>
+                                </td>
+                                <td>
+                                    <%= elective.courseCode %>
+                                </td>
+                                <td>
+                                    <%= 50 - elective.enrolledStudents.length %>
+                                </td>
+                        </tr>
+                        <% } %>
+                    <% }); %>-->
+            </tbody>
+        </table>
+    </div>
+    
+  </div>
+</div>
